@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Style for golden color */
+      .gold {
+        color: gold;
+      }
+    </style>
+  </head>
+
+  <body id="bg">
+    <div
+      class="w-full h-screen px-10 py-10 bg-gray-200 bg-cover bg-opacity-90"
+      style="background-image: url(./four.jpg)"
+    >
+      <div class="flex items-center justify-between">
+        <div class="flex flex-col items-start uppercase text-white">
+          <h1 class="text-xs italic font-light" style="margin-bottom: -9px">
+            Find
+          </h1>
+          <div class="flex gap-1 items-center">
+            <h1 class="text-xl font-semibold italic">True logo</h1>
+            <h1 class="text-xs">AI generated</h1>
+          </div>
+        </div>
+        <div
+          class="text-white w-24 h-10 rounded-lg bg-red-600 flex items-center justify-center"
+        >
+          <h1 class="uppercase text-sm">log out</h1>
+        </div>
+      </div>
+      <div class="my-20 flex items-start gap-40">
+        <div class="flex flex-col gap-5 text-white">
+          <h1 class="text-3xl font-bold uppercase">
+            Fake logo <br />
+            Detection
+          </h1>
+          <h1 class="text-sm" style="width: 400px">
+            Our Fake Logo Detection System utilizes advanced image recognition
+            and machine learning algorithms to swiftly identify counterfeit
+            logos across various online platforms. With a comprehensive database
+            and customizable alerts, it empowers consumers and brands to combat
+            the proliferation of fraudulent branding, fostering trust in the
+            digital marketplace.
+          </h1>
+          <input type="file" class="uppercase text-sm" id="fileInput" />
+        </div>
+        <div
+          id="show"
+          class="w-auto h-auto px-5 py-5 flex flex-col gap-5 bg-white rounded-xl drop-shadow-lg"
+          style="display: none"
+        >
+          <h1 class="flex items-center">
+            <span class="font-semibold">Result:</span>
+            <span id="Result" class="text-red-500 font-semibold"> </span>
+          </h1>
+          <h1
+            id="BrandName"
+            class="text-red-500 font-semibold"
+            style="display: none"
+          >
+            Brand Name: Nike
+          </h1>
+          <h1
+            id="Description"
+            class="text-red-500 font-semibold"
+            style="display: none"
+          >
+            About: Nike is a good company
+          </h1>
+          <h1
+            id="WebsiteLink"
+            class="text-red-500 font-semibold"
+            style="display: none"
+          >
+            Website Link:
+            <a href="https://www.nike.com" target="_blank">www.nike.com</a>
+          </h1>
+          <hr class="w-full border-black" />
+
+          <img width="400" id="orgirinal-logo" src="" alt="" />
+        </div>
+      </div>
+      <div class="text-white">
+        <span class="star" data-rating="1">★</span>
+        <span class="star" data-rating="2">★</span>
+        <span class="star" data-rating="3">★</span>
+        <span class="star" data-rating="4">★</span>
+        <span class="star" data-rating="5">★</span>
+      </div>
+
+      <!-- Feedback Button -->
+      <button class="text-white" id="feedbackButton">Give Feedback</button>
+    </div>
+    <!-- Star Rating -->
+
+    <script src="home.js" type="module"></script>
+  </body>
+</html>
